@@ -30,9 +30,6 @@ func messageCreate(session *discordgo.Session, msg *discordgo.MessageCreate) {
 	if err != nil {
 		return
 	}
-	if channel.Type != 1 {
-		return
-	}
 	var args = strings.Split(msg.Content, " ")
 	var command string
 	if len(args) < 1 {
